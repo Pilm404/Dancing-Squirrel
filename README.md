@@ -33,7 +33,7 @@ pip install requests pillow ascii_magic
 
 2. Run the program:  
 ```bash
-python squirrel_animation.py
+python main.py
 ```  
 
 ## Usage  
