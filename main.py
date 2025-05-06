@@ -58,7 +58,12 @@ class DancingSquirrel:
 if __name__ == '__main__':
     squirrel = DancingSquirrel("https://media.tenor.com/smLZ8pqP42UAAAAi/dancing-squirrel-dancing.gif", 100)
     squirrel.run()
-    try:
-        input("Prees Enter to exit\n")
-    finally:
+    
+    if 'GITHUB_ACTIONS' in os.environ:
+        time.sleep(45)
         squirrel.stop()
+    else:
+        try:
+            input("Press Enter to exit\n")
+        finally:
+            squirrel.stop()
